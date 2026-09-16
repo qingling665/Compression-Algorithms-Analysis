@@ -18,7 +18,6 @@
   * 將影像切割為 8x8 區塊，進行 2D DCT 轉換。
   * 設計多組 Quality 參數 (10~90) 的量化表 (Quantization Table) 進行數據壓縮。
   * 實作 IDCT 進行影像重建，並計算出精準的壓縮比 (Compression Ratio) 與執行時間。
-* **檔案連結**：[Image_Compression_DCT.ipynb](./Image_Compression_DCT.ipynb)
 
 ---
 
@@ -31,4 +30,4 @@
   * 獨立實作 **LZ77** (滑動視窗機制)、**LZ78** (動態字典建立) 與 **LZW** 三種演算法的壓縮與解壓縮邏輯。
   * 對多組不同大小的文本檔案 (`test1.txt`, `test2.txt`, `test3.txt`) 進行壓力測試，確保解碼正確無損。
   * 針對各演算法的 **壓縮率**、**壓縮時間** 與 **解壓縮時間** 進行量化比較與圖表視覺化。
-* **檔案連結**：[Text_Compression_LZ.ipynb](./Text_Compression_LZ.ipynb)# Compression-Algorithms-Analysis
+  
