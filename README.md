@@ -1,1 +1,34 @@
-# Compression-Algorithms-Analysis
+# 資料處理與演算法效能分析實作 (Data Compression Algorithms Analysis)
+
+本專案從底層實作經典的資料壓縮演算法，涵蓋**影像頻域壓縮**與**無損文本壓縮**兩大領域，並透過量化指標與圖表，深入評估不同參數與演算法之間的效能差異。
+
+## 專案亮點
+* **跨領域資料處理**：熟練處理 2D 影像矩陣與 1D 文本字串資料。
+* **底層邏輯建構**：不依賴高階黑箱套件，親自實作數學轉換與動態字典編碼演算法。
+* **效能視覺化分析**：整合 Matplotlib 繪製效能比較圖表，針對壓縮率與執行時間進行嚴謹的實驗對比。
+
+---
+
+## 模組一：基於 DCT 之影像頻域壓縮實作
+
+利用離散餘弦轉換（Discrete Cosine Transform, DCT）分析影像頻域特性，並透過量化矩陣達成影像壓縮。
+
+* **使用技術**：Python, NumPy, OpenCV, Matplotlib
+* **實作細節**：
+  * 將影像切割為 8x8 區塊，進行 2D DCT 轉換。
+  * 設計多組 Quality 參數 (10~90) 的量化表 (Quantization Table) 進行數據壓縮。
+  * 實作 IDCT 進行影像重建，並計算出精準的壓縮比 (Compression Ratio) 與執行時間。
+* **檔案連結**：[Image_Compression_DCT.ipynb](./Image_Compression_DCT.ipynb)
+
+---
+
+## 模組二：經典無損資料壓縮演算法與效能分析
+
+探討並實作 Lempel-Ziv 系列之經典字典型壓縮演算法，驗證其在不同文本大小下的時間與空間複雜度。
+
+* **使用技術**：Python, 基礎資料結構與演算法設計
+* **實作細節**：
+  * 獨立實作 **LZ77** (滑動視窗機制)、**LZ78** (動態字典建立) 與 **LZW** 三種演算法的壓縮與解壓縮邏輯。
+  * 對多組不同大小的文本檔案 (`test1.txt`, `test2.txt`, `test3.txt`) 進行壓力測試，確保解碼正確無損。
+  * 針對各演算法的 **壓縮率**、**壓縮時間** 與 **解壓縮時間** 進行量化比較與圖表視覺化。
+* **檔案連結**：[Text_Compression_LZ.ipynb](./Text_Compression_LZ.ipynb)# Compression-Algorithms-Analysis
